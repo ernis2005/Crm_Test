@@ -1,0 +1,29 @@
+.OutfitsTabels {
+    border: 1px solid #ECEEF1;
+    border-collapse: collapse;
+    width: 100%;
+    padding: var(--pading);
+
+    th {
+        border: 1px solid #ECEEF1;
+        padding: 16px 20px 16px 20px;
+        border-collapse: collapse;
+        text-align: left;
+        padding-left: 20px;
+        color: #000;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30.24px;
+        text-align: left;
+        text-align: center;
+    }
+    td {
+        border: 1px solid #ECEEF1;
+        color: #000;
+        padding: 16px 20px 16px 20px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27.72px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,43 @@
+.DashboardCards{
+    cursor: pointer;
+    width: -webkit-fill-available;
+    padding: 30px;
+    border: 0.9px solid var(--color);
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 15px;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+font-size: 24px;
+font-weight: 600;
+line-height: 30.24px;
+text-align: left;
+color: var(--color);
+
+        }
+        span {
+            font-size: 30px;
+        }
+    }
+    p{
+            font-size: 18px;
+        font-weight: 500;
+        line-height: 22.68px;
+        text-align: left;
+        color: var(--color);
+        }
+        samp {
+         
+font-size: 15px;
+font-weight: 400;
+line-height: 18.9px;
+text-align: left;
+color: var(--color);
+
+        }
+}

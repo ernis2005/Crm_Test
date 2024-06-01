@@ -1,0 +1,36 @@
+.navbar {
+    margin: 0 auto;
+    padding: var(--pading);
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #FFFFFF;
+    .Nav{
+        display: flex;
+        flex-direction: column;
+        ul {
+            display: flex;
+            padding: 0px;
+            flex-direction: column;
+            li{
+                list-style: none;
+                white-space: nowrap;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                
+font-size: 20px;
+font-weight: 500;
+line-height: 25.2px;
+text-align: left;
+
+padding: 20px 50px 20px 50px;
+cursor: pointer;
+
+&:hover{
+    background: #E8F2FC;
+
+}
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.OutfitsTabels {
+    border: 1px solid #ECEEF1;
+    border-collapse: collapse;
+    width: 100%;
+    padding: var(--pading);
+
+    th {
+        border: 1px solid #ECEEF1;
+        padding: 10px 0px 10px 0px;
+        border-collapse: collapse;
+        text-align: left;
+        padding-left: 20px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20.16px;
+        text-align: left;
+
+    }
+
+    td {
+        border: 1px solid #ECEEF1;
+        color: #000;
+        font-size: 14px;
+        padding: 16px 20px 16px 20px;
+        font-weight: 500;
+        line-height: 17.64px;
+        text-align: left;
+
+        select {
+            option {
+                width: 100%;
+                padding: 10px 20px 10px 20px !important;
+                outline: none;
+                border: none;
+
+                background-color: #fff !important;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.9px;
+                text-align: center;
+                color: #000 !important;
+
+            }
+        }
+
+    }
+}
+
+
+
+
+.tb5 {
+    padding: 10px 20px 10px 20px !important;
+
+}
+
+.selectActive1 {
+    background: #E3F2FD;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #0D47A1;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+
+}
+
+.selectActive2 {
+    background: #FFF75E80;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #FF9500;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.selectActive3 {
+    background: #DEC9E999;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #9163CB;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.selectActive4 {
+    background: #ECFDF3;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #037847;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+.selectActive5 {
+    background: #E9ECEF;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #6C757D;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.selectActive6 {
+    background: #FFF0F3;
+
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.64px;
+    text-align: center;
+    color: #C9184A;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
