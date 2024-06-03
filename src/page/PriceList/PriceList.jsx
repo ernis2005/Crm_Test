@@ -21,7 +21,7 @@ const PriceList = () => {
         <DivBg key={index}>
         <div className={s.titel1} style={{ justifyContent: 'space-between' , paddingBottom: '0px !important' }}>
           <h4>{res.name}</h4>
-          <button>Редактировать <Edit /></button>
+          <NavLink to={`/price-list/create-a-price-list?${res.name}`}> <button>Редактировать <Edit /> </button></NavLink>
         </div>
        <PriceistTabes data={res.data}/>
       </DivBg>

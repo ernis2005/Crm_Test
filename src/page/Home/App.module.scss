@@ -1,53 +1,106 @@
 .titel {
+  display: flex;
+  position: relative;
+  padding: var(--pading);
+  padding-bottom: 0px;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    padding: 0px;
+    margin: 0;
+    font-size: var(--sizeh4);
+
+    font-weight: 500;
+    line-height: 37.8px;
+    text-align: left;
+  }
+
+  button {
+    border: 1px solid #000000;
+    background-color: #00000000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
     display: flex;
-    position: relative;
-    padding: var(--pading);
-    padding-bottom: 0px;
-    gap: 40px;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
-
-    h4 {
-        padding: 0px;
-        margin: 0;
-        font-size: var(--sizeh4);
-
-        font-weight: 500;
-        line-height: 37.8px;
-        text-align: left;
-
-    }
-
-    button {
-        border: 1px solid #000000;
-        background-color: #00000000;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 25.2px;
-        text-align: left;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        padding: 10px 20px 10px 20px;
-    }
-
+    padding: 10px 20px 10px 20px;
+  }
 }
 
 .Cards {
-    display: grid;
+  display: grid;
 
-    padding-left: var(--pading);
-    padding-bottom: var(--pading);
-    padding-right: var(--pading);
-    grid-template-columns: repeat(auto-fill, minmax(438px, 1fr));
-    gap: 30px;
-    row-gap: 40px;
+  padding-left: var(--pading);
+  padding-bottom: var(--pading);
+  padding-right: var(--pading);
+  grid-template-columns: repeat(auto-fill, minmax(438px, 1fr));
+  gap: 30px;
+  row-gap: 40px;
 }
 
 .App {
-    padding: var(--pading);
+  padding: var(--pading);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.DiagramsInflation {
+  padding: var(--pading);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  max-width: 100%;
+  padding-top: 0px;
+
+  overflow: hidden;
+  .DiagramsInflationNav {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
+    padding-left: 23px;
+    padding-right: 11px;
+    max-width: 100%;
+    overflow: hidden;
+
+    h4 {
+      color: #000;
+      font-size: 23.95px;
+      font-weight: 500;
+      padding: 0px;
+      margin: 0px;
+      align-items: center;
+      line-height: 30.18px;
+      text-align: center;
+    }
+    span {
+      display: flex;
+      gap: 10px;
+
+      align-items: center;
+      select {
+        padding: 9.58px 14.37px 9.58px 14.37px;
+        border: 0.96px solid #017dc3;
+        border-radius: 6.45px;
+        font-size: 13.41px;
+        font-weight: 400;
+        outline: none;
+        color: #017DC3;
+        line-height: 16.9px;
+        text-align: left;
+      }
+      button {
+        background: #017DC3;
+        padding: 9.58px 14.37px 9.58px 14.37px;
+        gap: 0px;
+        border-radius: 6.45px ;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
 }

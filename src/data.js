@@ -45,7 +45,7 @@ export const diogram = [
 
 export const priceList = [
     {
-        name: " test1",
+        name: "test1",
         data: [
             {
                 id: 1,
@@ -68,7 +68,7 @@ export const priceList = [
         ]
     },
     {
-        name: " test2",
+        name: "test2",
         data: [
             {
                 id: 1,
@@ -79,7 +79,7 @@ export const priceList = [
         ]
     },
     {
-        name: " test3",
+        name: "test3",
         data: [
             {
                 id: 1,
