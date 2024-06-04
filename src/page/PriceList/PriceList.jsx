@@ -58,7 +58,7 @@ const PriceList = () => {
       <div className={s.filter}>
         <DivBg>
           <div className={s.inputSearch}>
-            <input onChange={e => handleFilter(e)} type="text" placeholder="Поиск" />
+            <input onChange={e => handleFilter(e)} type="text" placeholder="Поиск наряда" />
             <button >
               <IoSearchOutline />
             </button>
