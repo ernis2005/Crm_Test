@@ -4,7 +4,7 @@ import DivBg from '../../components/Cards/DivBg/DivBg'
 import DashboardCards from '../../components/Cards/DashboardCards/DashboardCards'
 import OutfitsTabels from '../../components/Tables/OutfitsTabels/OutfitsTabels'
 import { BiPlus } from 'react-icons/bi'
-import { diogram } from '../../data'
+import { diogram, outfitsTabels1 } from '../../data'
 import DiagramsInflation from '../../components/Diagrams/DiagramsInflation/DiagramsInflation'
 const Home = () => {
 
@@ -12,7 +12,7 @@ const Home = () => {
         name: 'Inflation',
         data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2, 1.4, 0.8, 2.5, 0.2]
     }]
-
+    const data = outfitsTabels1
   
     return (
         <div className={s.App}>
@@ -87,7 +87,7 @@ const Home = () => {
                     <h4>Наряды  </h4>
                     <button>Подробнее</button>
                 </div>
-                <OutfitsTabels />
+                <OutfitsTabels data={data}/>
             </DivBg>
         </div>
     )

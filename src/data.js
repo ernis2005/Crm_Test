@@ -105,14 +105,14 @@ export const priceList = [
 
 
 ]
- export const outfitsTabels = [
+ export const outfitsTabels1 = [
     {
       id: 1,
-      name: "Иванов Иван Иванович",
+      name: "Эрнис",
       date: "01.01.2022",
       dateEnd: "01.01.2022",
       comment: "Комментарий",
-      status: "В стоматологии",
+      status: "На примерке",
       sum: 1000,
     },
     {
