@@ -13,14 +13,26 @@ const NavBar = ({ isModal, setIsModal }) => {
   return (
     <Sidebar collapsed={isModal} className={s.navbar}>
       <Logo />
-      <Menu menuItemStyles={{
+      <Menu  menuItemStyles={{
         button: {
           [`&.active`]: {
             backgroundColor: '#E8F2FC',
             color: '#00B0F0',
-            borderLeft: "9px solid #017DC3"
-          },
-        },
+            position: "relative", 
+    
+            "&::before": { 
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              height: "100%",
+              width: "6px", 
+              backgroundColor: "#017DC3", 
+              borderTopRightRadius: "9999px", 
+              borderBottomRightRadius: "9999px" 
+            }
+          }
+        }
       }}>
         <MenuItem
           component={<NavLink to="/" />}
