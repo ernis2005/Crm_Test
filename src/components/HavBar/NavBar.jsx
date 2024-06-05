@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './page.module.scss';
 import { Logo } from '../../assets/svg/logo';
-import { HomeBlcak, PriceList } from '../../assets/svg/navList';
+import { HomeBlcak, PriceList, Qutfits } from '../../assets/svg/navList';
 import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar';
 import { NavLink, useLocation } from 'react-router-dom';
 
@@ -18,6 +18,7 @@ const NavBar = ({ isModal, setIsModal }) => {
           [`&.active`]: {
             backgroundColor: '#E8F2FC',
             color: '#00B0F0',
+            borderLeft: "9px solid #017DC3"
           },
         },
       }}>
@@ -32,6 +33,12 @@ const NavBar = ({ isModal, setIsModal }) => {
           icon={<PriceList stroke={isActive("/price-list") || isActive("/price-list/create-a-price-list") ? "#00B0F0" : "black"} />}
         >
           Прайс-лист
+        </MenuItem>
+
+        <MenuItem
+          component={<NavLink to="/qutfits" />}
+          icon={<Qutfits stroke={isActive("/qutfits") ? "#00B0F0" : "black"} />}
+        >Наряды
         </MenuItem>
       </Menu>
     </Sidebar>

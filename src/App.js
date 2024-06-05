@@ -8,6 +8,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import PriceList from './page/PriceList/PriceList'
 import СreateAPriceList from "./page/PriceList/СreateAPriceList/СreateAPriceList"
 import { useState } from 'react';
+import Outfits from './page/Outfits/Outfits';
 
 function App() {
   const [isModal, setIsModal] = useState(false)
@@ -18,14 +19,16 @@ function App() {
     <div>
       <div className={s.NavBarStyle}>
         <button onClick={() => setIsModal(!isModal)}><RxHamburgerMenu /></button>
-
       </div>
       <Routes >
+        
         <Route path="/" element={<Home />} />
+        
         <Route path="/price-list" element={<PriceList />} />
+        
         <Route path="/price-list/create-a-price-list" element={<СreateAPriceList />} />
+        <Route path="/qutfits" element={<Outfits />} />
       </Routes>
-
     </div>
   </div>
   );

@@ -1,0 +1,130 @@
+.PriceList {
+    padding: var(--pading);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding-bottom: 50px;
+  }
+  
+  .titel {
+    display: flex;
+    position: relative;
+    padding: var(--pading);
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    h4 {
+      padding: 0px;
+      margin: 0;
+      font-size: var(--sizeh4);
+      font-weight: 500;
+      line-height: 37.8px;
+      text-align: left;
+    }
+    button {
+      border: 1px solid #000000;
+      background-color: #00000000;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 25.2px;
+      text-align: left;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 20px 10px 20px;
+    }
+  }
+  .filter {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr min-content;
+    justify-content: space-between;
+    .inputSearch {
+      height: 100%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 2fr min-content;
+      input {
+        font-size: 24px;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        line-height: 30.24px;
+        text-align: left;
+        color: #888888;
+      }
+      button {
+        background: #017dc3;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: none;
+  
+        svg {
+          font-size: 25px;
+        }
+      }
+    }
+  
+    .inputFilter {
+      padding: 20px;
+      display: flex;
+      gap: 100px;
+      align-items: center;
+      height: 100%;
+      p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30.24px;
+        text-align: left;
+        white-space: nowrap;
+      }
+      button {
+        width: 48px;
+        height: 48px;
+        background-color: #017dc3;
+        padding: 10px;
+        gap: 10px;
+        display: grid;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        svg {
+          font-size: 25px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  .Modal {
+    position: absolute;
+    right: 30px;
+    top: 353px;
+    .modalInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+  
+      li {    
+        list-style: none;
+        cursor: pointer;
+        width: 249px;
+        gap: 0px;
+        border-radius: 10px;
+        border: 1px;
+        color: #000000;
+        font-size: 18.75px;
+        font-weight: 400;
+        line-height: 23.62px;
+        text-align: left;
+        padding: 15px 20px 15px 20px;
+        border: 1px solid red;
+      }
+    }
+  }
+  
