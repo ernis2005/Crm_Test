@@ -9,7 +9,6 @@ import {
   startOfMonth,
 } from "date-fns";
 import { CiDocumentation } from "../../../assets/svg/сreteAnOutfit";
-import DatePicker from "react-datepicker";
 const CreteAnOutfit = () => {
   const [selectedDate, setSelectedDate] = useState(startOfMonth(new Date()));
 
@@ -30,18 +29,49 @@ const CreteAnOutfit = () => {
         <div className={s.from}>
           <div className={s.from1}>
             <label name="" id="">
-              <p>ФИО пациента*</p>
+              <p>
+                ФИО пациента<span>*</span>{" "}
+              </p>
               <input type="text" placeholder="Введите ФИО пациента" />
             </label>
             <label name="" id="">
-              <p>Дата рождения* </p>
-              <DatePicker
-                selected={selectedDate}
-                onChange={handleDateChange}
-                filterDate={filterWeekends}
-                inline // Отображает календарь в развернутом виде
-              />
+              <p>
+                Дата рождения <span>*</span>{" "}
+              </p>
+              <input type="date" />
             </label>
+            <label name="" id="">
+              <p>Дата сдачи </p>
+              <input type="date" />
+            </label>
+            <label name="" id="">
+              <p>
+                Клиника (откуда пришла работа)<span>*</span>{" "}
+              </p>
+              <select name="" id="">
+                <option value="1">ООО Клиника</option>
+                <option value="2">2</option>
+              </select>
+            </label>
+            <label name="" id="">
+              <p>
+                Врач <span>*</span>{" "}
+              </p>
+              <select name="" id="">
+                <option value="1">Захаров Илья Николаевич</option>
+                <option value="2">2</option>
+              </select>
+            </label>
+            <label name="" id="">
+              <p>Дата примерки </p>
+              <input type="date" />
+            </label>
+          </div>
+
+          <div className={s.from2}>
+            <p>
+              Выбрать прайс - лист <span>*</span>
+            </p>
           </div>
         </div>
       </DivBg>
