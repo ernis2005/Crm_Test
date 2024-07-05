@@ -1,13 +1,11 @@
-.HomeNav{
+.HomeNav {
     width: 100%;
     display: grid;
-    grid-template-columns: min-content  3fr; 
+    grid-template-columns: min-content 3fr;
     min-height: 100vh;
-    
 
-
-.NavBarStyle{
-    background-color: #fff;
-    padding: var(--pading);
-}
+    .NavBarStyle {
+        background-color: #fff;
+        padding: var(--pading);
+    }
 }

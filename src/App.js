@@ -9,6 +9,8 @@ import СreateAPriceList from "./page/PriceList/СreateAPriceList/СreateAPriceL
 import { useState } from "react";
 import Outfits from "./page/Outfits/Outfits";
 import CreteAnOutfit from "./page/Outfits/create-an-outfit/create-an-outfit";
+import Patients from "./page/Patients/Patients";
+import Patients2 from "./page/Patients2/Patients2";
 
 function App() {
   const [isModal, setIsModal] = useState(false);
@@ -30,6 +32,8 @@ function App() {
             element={<СreateAPriceList />}
           />
           <Route path="/qutfits" element={<Outfits />} />
+          <Route path="/patients" element={<Patients />} />
+          <Route path="/patients2" element={<Patients2 />} />
           <Route path="/qutfits/create-an-outfit" element={<CreteAnOutfit />} />
         </Routes>
       </div>
