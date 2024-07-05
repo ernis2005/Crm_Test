@@ -64,6 +64,18 @@ const NavBar = ({ isModal, setIsModal }) => {
         >
           Наряды
         </MenuItem>
+        <MenuItem
+          component={<NavLink to="/patients" />}
+          icon={<Qutfits stroke={isActive("/qutfits") ? "#00B0F0" : "black"} />}
+        >
+          Пациенты
+        </MenuItem>
+        <MenuItem
+          component={<NavLink to="/patients2" />}
+          icon={<Qutfits stroke={isActive("/qutfits") ? "#00B0F0" : "black"} />}
+        >
+          Пациенты2
+        </MenuItem>
       </Menu>
     </Sidebar>
   );
