@@ -3,6 +3,7 @@ import s from "./page.module.scss";
 import image2 from "../../assets/image2.svg";
 import downloa from "../../assets/downloa.svg";
 import image3 from "../../assets/image3.svg";
+import { NavLink } from "react-router-dom";
 const Patients2 = () => {
   return (
     <div>
@@ -90,6 +91,10 @@ const Patients2 = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className={s.EndBtn}>
+          <button>Отмена</button>
+          <button>Принят</button>
         </div>
       </div>
     </div>
