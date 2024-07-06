@@ -204,4 +204,11 @@
             }
         }
     }
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+    .errorInput {
+        border: 1px solid red;
+    }
 }
