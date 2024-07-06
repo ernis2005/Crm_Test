@@ -21,7 +21,7 @@ function App() {
       <div>
         <div className={s.NavBarStyle}>
           <button onClick={() => setIsModal(!isModal)}>
-            <RxHamburgerMenu />
+            <RxHamburgerMenu />  
           </button>
         </div>
         <Routes>
