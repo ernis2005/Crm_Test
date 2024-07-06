@@ -21,7 +21,10 @@ function App() {
       <NavBar isModal={isModal} setIsModal={setIsModal} />
       <div>
         <div className={s.NavBarStyle}>
-          <button  className={s.NavBarStyleButton} onClick={() => setIsModal(!isModal)}>
+          <button
+            className={s.NavBarStyleButton}
+            onClick={() => setIsModal(!isModal)}
+          >
             <RxHamburgerMenu />
           </button>
 
@@ -48,7 +51,7 @@ function App() {
           />
           <Route path="/qutfits" element={<Outfits />} />
           <Route path="/patients" element={<Patients />} />
-          <Route path="/patients2" element={<Patients2 />} />
+          <Route path="/patients/patients2" element={<Patients2 />} />
           <Route path="/qutfits/create-an-outfit" element={<CreteAnOutfit />} />
         </Routes>
       </div>
