@@ -6,6 +6,7 @@ import OutfitsTabels from "../../components/Tables/OutfitsTabels/OutfitsTabels";
 import { BiPlus } from "react-icons/bi";
 import { diogram, outfitsTabels1 } from "../../data";
 import DiagramsInflation from "../../components/Diagrams/DiagramsInflation/DiagramsInflation";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   const series = [
     {
@@ -20,9 +21,11 @@ const Home = () => {
       <DivBg>
         <div className={s.titel}>
           <h4>Панель приборов Создать наряд</h4>
-          <button>
-            Создать наряд <BiPlus />
-          </button>
+          <NavLink to="/qutfits/create-an-outfit">
+            <button>
+              Создать наряд <BiPlus />
+            </button>
+          </NavLink>
         </div>
         <div className={s.Cards}>
           {diogram.map((item, index) => (

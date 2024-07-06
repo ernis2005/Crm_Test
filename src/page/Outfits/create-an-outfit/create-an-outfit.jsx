@@ -11,11 +11,9 @@ import {
 import { CiDocumentation } from "../../../assets/svg/сreteAnOutfit";
 const CreteAnOutfit = () => {
   const [selectedDate, setSelectedDate] = useState(startOfMonth(new Date()));
-
   const filterWeekends = (date) => {
     return !isWeekend(date) && isSameMonth(date, setMonth(new Date(), 9)); // 9 - October
   };
-
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
