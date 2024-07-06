@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./page.module.scss";
-import image2 from "../../assets/image2.svg";
-import downloa from "../../assets/downloa.svg";
-import image3 from "../../assets/image3.svg";
+import image2 from "../../../assets/image2.svg";
+import downloa from "../../../assets/downloa.svg";
+import image3 from "../../../assets/image3.svg";
+import stop from "../../../assets/stop.svg";
 import { NavLink } from "react-router-dom";
 
 const inputMax = 50;
@@ -29,6 +30,53 @@ const Patients2 = () => {
     }
   };
 
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const loadYandexMaps = () => {
+      const script = document.createElement("script");
+      script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+      script.type = "text/javascript";
+      script.onload = () => {
+        if (window.ymaps) {
+          window.ymaps.ready(init);
+        } else {
+          console.error("Яндекс.Карты не загрузились");
+        }
+      };
+      script.onerror = () => {
+        console.error("Ошибка при загрузке скрипта Яндекс.Карт");
+      };
+      document.body.appendChild(script);
+    };
+
+    const init = () => {
+      if (!document.getElementById("map")) {
+        console.error('Элемент с id "map" не найден');
+        return;
+      }
+
+      const map = new window.ymaps.Map("map", {
+        center: [55.76, 37.64], // Координаты центра карты (Москва)
+        zoom: 10,
+      });
+
+      const placemark = new window.ymaps.Placemark(
+        [55.76, 37.64],
+        {},
+        { draggable: true }
+      );
+
+      map.geoObjects.add(placemark);
+    };
+
+    if (!window.ymaps) {
+      loadYandexMaps();
+    } else {
+      window.ymaps.ready(init);
+    }
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = {};
@@ -40,9 +88,20 @@ const Patients2 = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
+      // Отправка данных формы
       console.log("Form submitted:", inputs);
     }
   };
+
+  const handleFocus = () => {
+    setShowMap(true);
+  };
+
+  const handleBlur = () => {
+    // Задержка для того, чтобы карта не исчезала мгновенно при потере фокуса
+    setTimeout(() => setShowMap(false), 200);
+  };
+
   return (
     <div>
       <div className={s.patallBlock}>
@@ -94,9 +153,9 @@ const Patients2 = () => {
               <div className={s.flexInput}>
                 <div className={s.flexminiblock}>
                   <div className={s.inputStart2}>
-                    <h4>ФИО</h4>
+                    <h4>Дата рождения</h4>
                     <input
-                      type="text"
+                      type="date"
                       name="fio2"
                       placeholder="Носкова Дарья Николаевна"
                       value={inputs.fio2}
@@ -112,24 +171,27 @@ const Patients2 = () => {
                   </div>
                 </div>
                 <div className={s.inputStart}>
-                  <h4>ФИО</h4>
+                  <h4>Адрес</h4>
                   <input
                     type="text"
                     name="fio3"
-                    placeholder="Носкова Дарья Николаевна"
+                    placeholder="Геолакационный переулок 3/1"
                     value={inputs.fio3}
                     onChange={handleChange}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
                     maxLength={inputMax}
-                    className={errors.fio4 ? s.errorInput : ""}
+                    className={errors.fio3 ? s.errorInput : ""}
                   />
                   {errors.fio3 && <p className={s.error}>{errors.fio3}</p>}
                 </div>
+                {showMap && <div id="map" className={s.mapContainer}></div>}
                 <div className={s.inputStart}>
-                  <h4>ФИО</h4>
+                  <h4>E - mail</h4>
                   <input
-                    type="text"
+                    type="email"
                     name="fio4"
-                    placeholder="Носкова Дарья Николаевна"
+                    placeholder="Admin@gmail.com"
                     value={inputs.fio4}
                     onChange={handleChange}
                     maxLength={inputMax}
@@ -163,7 +225,10 @@ const Patients2 = () => {
           </div>
           <div className={s.blockEnd}>
             <div className={s.flexBlockLorem}>
-              <h5>Важная информация</h5>
+              <h5>
+                Важная информация
+                <img src={stop} alt="" />
+              </h5>
               <div className={s.blockLorem1}>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
@@ -174,7 +239,7 @@ const Patients2 = () => {
               </div>
             </div>
             <div className={s.flexBlockLorem}>
-              <h5>Важная информация</h5>
+              <h5>Комментарий</h5>
               <div className={s.blockLorem}>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
