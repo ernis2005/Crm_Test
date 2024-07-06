@@ -11,6 +11,7 @@ import Outfits from "./page/Outfits/Outfits";
 import CreteAnOutfit from "./page/Outfits/create-an-outfit/create-an-outfit";
 import Patients from "./page/Patients/Patients";
 import Patients2 from "./page/Patients2/Patients2";
+import { Notification, Search, User } from "./assets/svg/navPfofil";
 
 function App() {
   const [isModal, setIsModal] = useState(false);
@@ -20,9 +21,23 @@ function App() {
       <NavBar isModal={isModal} setIsModal={setIsModal} />
       <div>
         <div className={s.NavBarStyle}>
-          <button onClick={() => setIsModal(!isModal)}>
-            <RxHamburgerMenu />  
+          <button  className={s.NavBarStyleButton} onClick={() => setIsModal(!isModal)}>
+            <RxHamburgerMenu />
           </button>
+
+          <div className={s.Profil}>
+            <div className={s.NavSearch}>
+              <input type="text" placeholder="Поиск" />
+              <Search />
+            </div>
+            <div className={s.Notification}>
+              <Notification />
+            </div>
+            <div className={s.UserProfil}>
+              <User />
+              <p>Пользователь</p>
+            </div>
+          </div>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />

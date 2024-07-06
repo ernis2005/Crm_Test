@@ -1,7 +1,12 @@
 import React from "react";
 import s from "./page.module.scss";
 import { Logo } from "../../assets/svg/logo";
-import { HomeBlcak, PriceList, Qutfits } from "../../assets/svg/navList";
+import {
+  HomeBlcak,
+  Patients,
+  PriceList,
+  Qutfits,
+} from "../../assets/svg/navList";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -12,7 +17,9 @@ const NavBar = ({ isModal, setIsModal }) => {
 
   return (
     <Sidebar collapsed={isModal} className={s.navbar}>
-      <Logo />
+      <div className={s.LOgo}>
+        <p>Logo</p>
+      </div>
       <Menu
         menuItemStyles={{
           button: {
@@ -66,7 +73,9 @@ const NavBar = ({ isModal, setIsModal }) => {
         </MenuItem>
         <MenuItem
           component={<NavLink to="/patients" />}
-          icon={<Qutfits stroke={isActive("/qutfits") ? "#00B0F0" : "black"} />}
+          icon={
+            <Patients stroke={isActive("/patients") ? "#00B0F0" : "black"} />
+          }
         >
           Пациенты
         </MenuItem>
