@@ -17,6 +17,7 @@ const CreteAnOutfit = () => {
 
   const [isPriceListAccordion, setIsPriceListAccordion] = useState(false);
   const [priceListValue, setPriceListValue] = useState("Выберите прайс - лист");
+  console.log(priceListValue);
   const filterWeekends = (date) => {
     return !isWeekend(date) && isSameMonth(date, setMonth(new Date(), 9)); // 9 - October
   };
@@ -148,7 +149,13 @@ const CreteAnOutfit = () => {
               className={s.from2Accordion}
               onClick={() => setIsPriceListAccordion(!isPriceListAccordion)}
             >
-              <p>{priceListValue}</p>
+              <p>
+                {priceListValue !== "Выберите прайс - лист"
+                  ? `${priceListValue.name}  ${priceListValue.values.map(
+                      (res) => res.name
+                    )} `
+                  : "Выберите прайс - лист"}
+              </p>
               <ArrowDown />
             </div>
             {isPriceListAccordion && (
