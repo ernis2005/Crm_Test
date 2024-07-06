@@ -1,0 +1,113 @@
+.PriceList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  select {
+    border-radius: 10px;
+    border: 1px solid #eceef1;
+    cursor: pointer;
+
+    font-family: "Wix Madefor Display";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16.38px;
+    outline: none;
+    text-align: left;
+    color: #000000;
+    padding: 10px 15px 10px 15px;
+    width: 50%;
+  }
+  .PriceListTabes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .PriceListTabesCard {
+      display: grid;
+      grid-template-columns: 45px 2fr 1.1fr 1.1fr 96px;
+      border: 1px solid #eceef1;
+      border-radius: 10px;
+      align-items: center;
+      p {
+        padding: 0;
+        margin: 0;
+        padding: 14px;
+        color: #000000;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.38px;
+        text-align: left;
+
+        text-align: center;
+        border-right: 1px solid #eceef1;
+      }
+      .edit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: 10px;
+        button {
+          width: 28px;
+          height: 28px;
+          gap: 10px;
+          border-radius: 5px;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:nth-child(1) {
+            background-color: #f83d3d;
+          }
+          &:nth-child(2) {
+            background-color: #017dc3;
+          }
+        }
+      }
+    }
+  }
+
+  .PriceListInputList {
+    display: grid;
+    grid-template-columns: 400px 200px 200px;
+    border: 1px solid #eceef1;
+    width: fit-content;
+
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    input {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16.38px;
+      text-align: left;
+      color: #888888;
+      outline: none;
+      border: none;
+      border-right: 1px solid #eceef1;
+
+      padding: 10px 15px 10px 15px;
+      outline: none;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .PriceListAdd {
+    width: 86px;
+    height: 38px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    display: flex;
+
+    align-items: center;
+    text-align: center;
+    border: none;
+    background: #017dc3;
+    font-family: Wix Madefor Display;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.64px;
+    text-align: left;
+    color: #ffffff;
+  }
+}
