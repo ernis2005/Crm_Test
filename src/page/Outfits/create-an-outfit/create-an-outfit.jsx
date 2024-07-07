@@ -11,6 +11,8 @@ import {
 } from "date-fns";
 import { ArrowDown, CiDocumentation } from "../../../assets/svg/сreteAnOutfit";
 import PriceList from "../../../components/Outfits/Accordion/PriceList/PriceList";
+import { TeethList16 } from "../../../assets/svg/TeethList";
+import TeethList from "../../../components/Outfits/TeethList/TeethList";
 
 const CreteAnOutfit = () => {
   const [selectedDate, setSelectedDate] = useState(startOfMonth(new Date()));
@@ -178,6 +180,9 @@ const CreteAnOutfit = () => {
                 </button>
               ))}
             </div>
+          </div>
+          <div className={s.from4}>
+            <TeethList priceListValue={priceListValue} />
           </div>
         </div>
       </DivBg>
