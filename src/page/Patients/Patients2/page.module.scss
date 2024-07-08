@@ -1,0 +1,242 @@
+.patallBlock {
+    width: 95%;
+    height: 709px;
+    border-radius: 15px;
+    border: 0.75px solid #e9ecef;
+    background: #ffffff;
+    margin: 35px;
+    padding: 25px 25px 88px 25px;
+    form {
+        display: grid;
+        row-gap: 25px;
+    }
+    .blockFlex {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        column-gap: 25px;
+        align-items: start;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 110px;
+        }
+        .gridBlock {
+            display: grid;
+            row-gap: 25px;
+            .flexInput {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 25px;
+                .flexminiblock {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+            }
+        }
+        .inputStart {
+            display: grid;
+            row-gap: 10px;
+            height: 67px;
+            input {
+                background: #f8f9fa;
+                max-width: 100%;
+                height: 38px;
+                border-radius: 10px;
+                outline: none;
+                padding-left: 10px;
+            }
+            h4 {
+                font-family: "Wix Madefor Display", sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 18.9px;
+                text-align: left;
+            }
+        }
+        .inputStart2 {
+            width: 100%;
+            display: grid;
+            row-gap: 10px;
+            height: 67px;
+            input {
+                width: 100%;
+                height: 40px;
+                border-radius: 10px;
+                background: #f8f9fa;
+                outline: none;
+                padding-left: 10px;
+            }
+            h4 {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.9px;
+                text-align: left;
+            }
+        }
+        .gridItem {
+            display: grid;
+            row-gap: 10px;
+            h4 {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.9px;
+                text-align: left;
+            }
+            .Itemblock {
+                width: 38px;
+                height: 38px;
+                border-radius: 8px;
+                background: #017dc3;
+            }
+        }
+    }
+    .pataiCenter {
+        display: grid;
+        row-gap: 10px;
+        h4 {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18.9px;
+            text-align: left;
+        }
+        .pataiCenterFlex {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 25px;
+            .blockItem {
+                height: 38px;
+                border-radius: 10px;
+                border: 0.75px;
+                background: #f8f9fa;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                p {
+                    font-family: Wix Madefor Display;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17.64px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .aiEndCenter {
+        display: grid;
+        row-gap: 10px;
+        width: 100%;
+        h4 {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18.9px;
+            text-align: left;
+        }
+        .columpGap {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .blockEnd {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: 25px;
+        .flexBlockLorem {
+            display: grid;
+            row-gap: 10px;
+            h5 {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.9px;
+            }
+            // .blockLorem {
+            //     width: 500px;
+            //     // height: 120px;
+            //     padding: 15px;
+            //     border-radius: 10px;
+            //     background: #f8f9fa;
+            // }
+            .blockLorem {
+                // width: 500px;
+                height: 110px;
+                padding: 15px;
+                border-radius: 10px;
+                background: #f8f9fa;
+                p {
+                    font-family: Wix Madefor Display;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 16.38px;
+                    text-align: left;
+                }
+            }
+            .blockLorem1 {
+                // width: 500px;
+                height: 120px;
+                padding: 15px;
+                border-radius: 10px;
+                background: #f8f9fa;
+                p {
+                    font-family: Wix Madefor Display;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 16.38px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .EndBtn {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        button {
+            padding: 10px;
+            border-radius: 10px;
+            background: #f83d3d;
+            border: none;
+            font-family: Wix Madefor Display;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17.64px;
+            text-align: center;
+            color: #ffffff;
+            &:nth-child(2) {
+                padding: 10px;
+                border-radius: 10px;
+                background: #017dc3;
+                border: none;
+                font-family: Wix Madefor Display;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.64px;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+    .errorInput {
+        border: 1px solid red;
+    }
+    .mapContainer {
+        margin-top: 10px;
+        border-radius: 10px;
+        position: fixed;
+        width: 70%;
+        height: 70%;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
