@@ -65,3 +65,13 @@ h1 {
   padding-bottom: var(--pading);
   padding-right: var(--pading);
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type="date"] {
+  font-family: Wix Madefor Display;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.64px;
+  text-align: left;
+}

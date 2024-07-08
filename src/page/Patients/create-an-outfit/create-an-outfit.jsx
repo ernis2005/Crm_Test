@@ -9,9 +9,8 @@ import image4 from "../../../assets/image4.svg";
 import image5 from "../../../assets/image5.svg";
 import image6 from "../../../assets/image6.svg";
 import image7 from "../../../assets/image7.svg";
-import image8 from "../../../assets/image8.svg";
 const inputMax = 50;
-const Patients2 = () => {
+const CreateOutfit = () => {
   const [inputs, setInputs] = useState({
     fio1: "",
     phone1: "",
@@ -105,11 +104,6 @@ const Patients2 = () => {
     // Задержка для того, чтобы карта не исчезала мгновенно при потере фокуса
     setTimeout(() => setShowMap(false), 200);
   };
-  const [isAccepted, setIsAccepted] = useState(false);
-
-  const handleAccept = () => {
-    setIsAccepted(true);
-  };
 
   return (
     <div>
@@ -176,7 +170,7 @@ const Patients2 = () => {
                   </div>
                   <div className={s.gridItem}>
                     <h4>Пол</h4>
-                    <img src={image8} alt="" />
+                    <div className={s.Itemblock}></div>
                   </div>
                 </div>
                 <div className={s.inputStart}>
@@ -265,20 +259,12 @@ const Patients2 = () => {
             </div>
           </div>
           <div className={s.EndBtn}>
-            {isAccepted ? (
-              <button className={s.btn}>Создать наряд</button>
-            ) : (
-              <>
-                <button>Отмена</button>
-                <button type="submit" onClick={handleAccept}>
-                  Принят
-                </button>
-              </>
-            )}
+            <button>Отмена</button>
+            <button type="submit">Принят</button>
           </div>
         </form>
       </div>
     </div>
   );
 };
-export default Patients2;
+export default CreateOutfit;
