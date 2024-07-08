@@ -58,7 +58,8 @@
         border-radius: 15px;
         background: #fff;
         border: 1px solid #e9ecef;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         row-gap: 25px;
         .tableBlock {
             width: 100%;

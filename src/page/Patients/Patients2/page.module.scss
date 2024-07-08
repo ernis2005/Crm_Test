@@ -6,13 +6,20 @@
     background: #ffffff;
     margin: 35px;
     padding: 25px 25px 88px 25px;
-    display: grid;
-    row-gap: 25px;
+    form {
+        display: grid;
+        row-gap: 25px;
+    }
     .blockFlex {
         display: grid;
         grid-template-columns: 1fr 9fr;
         column-gap: 25px;
         align-items: start;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 110px;
+        }
         .gridBlock {
             display: grid;
             row-gap: 25px;
@@ -22,6 +29,7 @@
                 column-gap: 25px;
                 .flexminiblock {
                     display: flex;
+                    align-items: center;
                     column-gap: 10px;
                 }
             }
@@ -36,8 +44,8 @@
                 height: 38px;
                 border-radius: 10px;
                 outline: none;
-                border: none;
                 padding-left: 10px;
+                border: 1px solid #f8f9fa;
             }
             h4 {
                 font-family: "Wix Madefor Display", sans-serif;
@@ -57,9 +65,9 @@
                 height: 40px;
                 border-radius: 10px;
                 background: #f8f9fa;
-                border: none;
                 outline: none;
                 padding-left: 10px;
+                border: 1px solid #f8f9fa;
             }
             h4 {
                 font-size: 15px;
@@ -70,11 +78,16 @@
         }
         .gridItem {
             display: grid;
-            .Itemblock {
+            row-gap: 10px;
+            h4 {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.9px;
+                text-align: left;
+            }
+            img {
                 width: 38px;
                 height: 38px;
-                border-radius: 8px;
-                background: #017dc3;
             }
         }
     }
@@ -113,6 +126,7 @@
     .aiEndCenter {
         display: grid;
         row-gap: 10px;
+        width: 100%;
         h4 {
             font-size: 15px;
             font-weight: 400;
@@ -121,7 +135,8 @@
         }
         .columpGap {
             display: flex;
-            justify-content: space-between;
+            column-gap: 25px;
+            flex-wrap: wrap;
         }
     }
     .blockEnd {
@@ -133,20 +148,14 @@
             display: grid;
             row-gap: 10px;
             h5 {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
                 font-size: 15px;
                 font-weight: 400;
                 line-height: 18.9px;
-                text-align: left;
             }
-            // .blockLorem {
-            //     width: 500px;
-            //     // height: 120px;
-            //     padding: 15px;
-            //     border-radius: 10px;
-            //     background: #f8f9fa;
-            // }
             .blockLorem {
-                // width: 500px;
                 height: 110px;
                 padding: 15px;
                 border-radius: 10px;
@@ -160,7 +169,6 @@
                 }
             }
             .blockLorem1 {
-                // width: 500px;
                 height: 120px;
                 padding: 15px;
                 border-radius: 10px;
@@ -203,5 +211,27 @@
                 color: #ffffff;
             }
         }
+        .btn {
+            background: #017dc3;
+        }
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+    .errorInput {
+        border: 1px solid red !important;
+    }
+    .mapContainer {
+        margin-top: 10px;
+        border-radius: 10px;
+        position: fixed;
+        width: 70%;
+        height: 70%;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 }
