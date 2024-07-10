@@ -12,10 +12,11 @@ import CreteAnOutfit from "./page/Outfits/create-an-outfit/create-an-outfit";
 import Patients from "./page/Patients/Patients";
 import { Notification, Search, User } from "./assets/svg/navPfofil";
 import Patients2 from "./page/Patients/Patients2/Patients2";
+import Test from "./page/TechnicianPages/Test/Test";
 
 function App() {
-  const [isModal, setIsModal] = useState(false);
-
+  const [isModal, setIsModal] = useState(true);
+  const [status, setStatus] = useState(2);
   return (
     <div className={s.HomeNav}>
       <NavBar isModal={isModal} setIsModal={setIsModal} />
@@ -27,7 +28,6 @@ function App() {
           >
             <RxHamburgerMenu />
           </button>
-
           <div className={s.Profil}>
             <div className={s.NavSearch}>
               <input type="text" placeholder="Поиск" />
@@ -42,19 +42,28 @@ function App() {
             </div>
           </div>
         </div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/price-list" element={<PriceList />} />
-          <Route
-            path="/price-list/create-a-price-list"
-            element={<СreateAPriceList />}
-          />
-          <Route path="/qutfits" element={<Outfits />} />
-          <Route path="/patients" element={<Patients />} />
-          <Route path="/patients/createoutfit" element={<Patients />} />
-          <Route path="/patients/patients2" element={<Patients2 />} />
-          <Route path="/qutfits/create-an-outfit" element={<CreteAnOutfit />} />
-        </Routes>
+        {status === 2 ? (
+          <Routes>
+            <Route path="/" element={<Test />} />
+          </Routes>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/price-list" element={<PriceList />} />
+            <Route
+              path="/price-list/create-a-price-list"
+              element={<СreateAPriceList />}
+            />
+            <Route path="/qutfits" element={<Outfits />} />
+            <Route path="/patients" element={<Patients />} />
+            <Route path="/patients/createoutfit" element={<Patients />} />
+            <Route path="/patients/patients2" element={<Patients2 />} />
+            <Route
+              path="/qutfits/create-an-outfit"
+              element={<CreteAnOutfit />}
+            />
+          </Routes>
+        )}
       </div>
     </div>
   );
