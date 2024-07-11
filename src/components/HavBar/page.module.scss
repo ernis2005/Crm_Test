@@ -4,6 +4,9 @@
   padding-left: 0px;
   padding-right: 0px;
   background-color: #ffffff;
+  @media screen and (max-width: 479px) {
+    display: none;
+  }
   .LOgo {
     width: 100%;
     height: 100px;
