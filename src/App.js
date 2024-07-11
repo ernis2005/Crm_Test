@@ -13,10 +13,11 @@ import Patients from "./page/Patients/Patients";
 import { Notification, Search, User } from "./assets/svg/navPfofil";
 import Patients2 from "./page/Patients/Patients2/Patients2";
 import Test from "./page/TechnicianPages/Test/Test";
+import Documentation from "./page/Documentation/Documentation";
 
 function App() {
   const [isModal, setIsModal] = useState(true);
-  const [status, setStatus] = useState(2);
+  const [status, setStatus] = useState(1);
   return (
     <div className={s.HomeNav}>
       <NavBar isModal={isModal} setIsModal={setIsModal} />
@@ -62,6 +63,7 @@ function App() {
               path="/qutfits/create-an-outfit"
               element={<CreteAnOutfit />}
             />
+            <Route path="/documentation" element={<Documentation />} />
           </Routes>
         )}
       </div>
