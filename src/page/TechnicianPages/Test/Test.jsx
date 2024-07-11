@@ -47,7 +47,7 @@ const Test = () => {
           </div>
           <div className={s.testBlock}>
             <div className={s.tableContainer}>
-              <table className={s.table}>
+              {/* <table className={s.table}>
                 <thead>
                   <tr>
                     <th>№</th>
@@ -87,7 +87,7 @@ const Test = () => {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table> */}
             </div>
           </div>
         </div>
