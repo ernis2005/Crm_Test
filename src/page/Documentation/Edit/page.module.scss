@@ -1,0 +1,37 @@
+.Edit {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .Titel {
+    display: flex;
+    padding: 15px;
+    font-family: Wix Madefor Display;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.68px;
+    text-align: left;
+    color: #000000;
+  }
+
+  .InputList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+    input {
+      font-family: Wix Madefor Display;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16.38px;
+      text-align: left;
+      color: #000000;
+      background: #f8f9fa;
+      outline: none;
+      border-radius: 10px;
+      padding: 14px;
+      border: none;
+    }
+  }
+}

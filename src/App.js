@@ -14,6 +14,7 @@ import { Notification, Search, User } from "./assets/svg/navPfofil";
 import Patients2 from "./page/Patients/Patients2/Patients2";
 import Test from "./page/TechnicianPages/Test/Test";
 import Documentation from "./page/Documentation/Documentation";
+import Edit from "./page/Documentation/Edit/Edit";
 
 function App() {
   const [isModal, setIsModal] = useState(true);
@@ -64,6 +65,7 @@ function App() {
               element={<CreteAnOutfit />}
             />
             <Route path="/documentation" element={<Documentation />} />
+            <Route path="/documentation/:id" element={<Edit />} />
           </Routes>
         )}
       </div>

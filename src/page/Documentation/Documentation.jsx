@@ -3,6 +3,7 @@ import s from "./page.module.scss";
 import DivBg from "../../components/Cards/DivBg/DivBg";
 import { Search } from "../../assets/svg/navPfofil";
 import { Delete, Edit } from "../../assets/svg/сreteAnOutfit";
+import { NavLink } from "react-router-dom";
 
 const Documentation = () => {
   const datalist = [
@@ -22,6 +23,9 @@ const Documentation = () => {
     });
     setData(result);
   }, [search]);
+  const delite = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
   return (
     <div className={s.Documentation}>
       <div className={s.Block1}>
@@ -49,21 +53,29 @@ const Documentation = () => {
 
       <DivBg>
         <div className={s.Block2}>
-          {data.map((item) => (
-            <div className={s.Cards}>
-              <p>{item.name}</p>
-              <p>{item.price}</p>
-              <p>{item.nameFile}</p>
-              <div className={s.ButtonLlist}>
-                <button>
-                  <Delete />{" "}
-                </button>
-                <button>
-                  <Edit />
-                </button>
-              </div>
-            </div>
-          ))}
+          {data.length === 0 ? (
+            <p>Ничего не найдено</p>
+          ) : (
+            <>
+              {data.map((item) => (
+                <div className={s.Cards} key={item.id}>
+                  <p>{item.name}</p>
+                  <p>{item.price}</p>
+                  <p>{item.nameFile}</p>
+                  <div className={s.ButtonLlist}>
+                    <button onClick={() => delite(item.id)}>
+                      <Delete />
+                    </button>
+                    <NavLink to={`/documentation/${item.id}`}>
+                      <button>
+                        <Edit />
+                      </button>
+                    </NavLink>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
         </div>
       </DivBg>
     </div>
