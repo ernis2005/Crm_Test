@@ -8,7 +8,7 @@ import {
   PriceList,
   Qutfits,
 } from "../../assets/svg/navList";
-import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
+import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
 import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = ({ isModal, setIsModal }) => {
@@ -125,6 +125,18 @@ const NavBar = ({ isModal, setIsModal }) => {
           >
             Документы
           </MenuItem>
+          <SubMenu
+            label="Статистики и отчеты"
+            icon={
+              <Documentation
+                stroke={isActive("/documentation") ? "#00B0F0" : "black"}
+              />
+            }
+          >
+            <MenuItem> - Финансовые отчеты</MenuItem>
+            <MenuItem> Line charts</MenuItem>
+            <MenuItem> Bar charts</MenuItem>
+          </SubMenu>
         </Menu>
       )}
     </Sidebar>
