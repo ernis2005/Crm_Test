@@ -15,6 +15,7 @@ import Patients2 from "./page/Patients/Patients2/Patients2";
 import Test from "./page/TechnicianPages/Test/Test";
 import Documentation from "./page/Documentation/Documentation";
 import Edit from "./page/Documentation/Edit/Edit";
+import AddAocuments from "./page/Documentation/AddAocuments/AddAocuments";
 
 function App() {
   const [isModal, setIsModal] = useState(true);
@@ -66,6 +67,10 @@ function App() {
             />
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/documentation/:id" element={<Edit />} />
+            <Route
+              path="/documentation/create-a-new-document"
+              element={<AddAocuments />}
+            />
           </Routes>
         )}
       </div>

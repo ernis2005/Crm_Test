@@ -32,7 +32,9 @@ const Documentation = () => {
         <DivBg>
           <div className={s.Titel}>
             <h4>Документация</h4>
-            <button>Добавить документов</button>
+            <NavLink to="/documentation/create-a-new-document">
+              <button>Добавить документов</button>
+            </NavLink>
           </div>
         </DivBg>
         <DivBg>

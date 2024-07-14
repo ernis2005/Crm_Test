@@ -1,13 +1,31 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import s from "./page.module.scss";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import DivBg from "../../../components/Cards/DivBg/DivBg";
+import { FiDelete } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
+import { BiEdit } from "react-icons/bi";
 const Edit = () => {
   const { id } = useParams();
+  console.log(id);
+  const navigate = useNavigate();
+  const [fileName, setFileName] = useState(null);
   const fileRef = useRef();
 
   const acctiv = () => {
     fileRef.current.click();
+  };
+  const handlerFile = (e) => {
+    setFileName(e.target.files[0].name);
+  };
+
+  const deleteDocument = () => {
+    if (window.confirm("Вы действительно хотите удалить документ?")) {
+      navigate("/documentation");
+    }
+  };
+  const editDocument = () => {
+    navigate("/documentation");
   };
   return (
     <div className={s.Edit}>
@@ -24,10 +42,12 @@ const Edit = () => {
             placeholder="Название документа"
             style={{ display: "none" }}
             ref={fileRef}
+            onChange={(e) => handlerFile(e)}
+            accept="image/*"
           />
 
           <div onClick={() => acctiv()}>
-            <p>Название документа</p>
+            <p>{fileName == null ? `Название документа` : fileName}</p>
             <svg
               width="14"
               height="14"
@@ -49,6 +69,14 @@ const Edit = () => {
               />
             </svg>
           </div>
+        </div>
+        <div className={s.ButtonList}>
+          <button onClick={() => deleteDocument()}>
+            <AiOutlineDelete />
+          </button>
+          <button onClick={() => editDocument()}>
+            <BiEdit />
+          </button>
         </div>
       </DivBg>
     </div>
