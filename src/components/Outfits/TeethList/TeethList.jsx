@@ -35,12 +35,21 @@ import {
   TeethList48,
 } from "../../../assets/svg/TeethList";
 
-const TeethCard = ({ TeethComponent, number, handleTeethColor }) => (
-  <div className={s.TeethCard} onClick={() => handleTeethColor(number)}>
-    <TeethComponent />
-    <p>{number}</p>
-  </div>
-);
+const TeethCard = ({
+  TeethComponent,
+  number,
+  handleTeethColor,
+  teethColorIndex,
+}) => {
+  const isTeethSelected = teethColorIndex.includes(number);
+  console.log(isTeethSelected, "teethColorIndex");
+  return (
+    <div className={s.TeethCard} onClick={() => handleTeethColor(number)}>
+      <TeethComponent color={isTeethSelected ? "#017DC3" : "#fff"} />
+      <p>{number}</p>
+    </div>
+  );
+};
 const TeethList = ({ priceListValue }) => {
   const teethData = [
     { component: TeethList18, number: 18 },
@@ -106,6 +115,7 @@ const TeethList = ({ priceListValue }) => {
               key={number}
               TeethComponent={component}
               number={number}
+              teethColorIndex={teethColorIndex}
             />
           ))}
         </div>

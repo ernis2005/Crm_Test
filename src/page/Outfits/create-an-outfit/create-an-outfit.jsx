@@ -184,6 +184,13 @@ const CreteAnOutfit = () => {
           <div className={s.from4}>
             <TeethList priceListValue={priceListValue} />
           </div>
+          <div className={s.from5}>
+            <h2>Комментарий</h2>
+            <textarea placeholder="Комментарий" />
+          </div>
+        </div>
+        <div className={s.buttonList}>
+          <button>Cоздать наряд</button>
         </div>
       </DivBg>
     </div>

@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import s from "./page.module.scss";
 import { Logo } from "../../assets/svg/logo";
 import {
+  Documentation,
   HomeBlcak,
   Patients,
   PriceList,
   Qutfits,
 } from "../../assets/svg/navList";
-import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
+import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
 import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = ({ isModal, setIsModal }) => {
-  const [status, setStatus] = useState(2);
+  const [status, setStatus] = useState(1);
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
@@ -114,6 +115,28 @@ const NavBar = ({ isModal, setIsModal }) => {
           >
             Пациенты
           </MenuItem>
+          <MenuItem
+            component={<NavLink to="/documentation" />}
+            icon={
+              <Documentation
+                stroke={isActive("/documentation") ? "#00B0F0" : "black"}
+              />
+            }
+          >
+            Документы
+          </MenuItem>
+          <SubMenu
+            label="Статистики и отчеты"
+            icon={
+              <Documentation
+                stroke={isActive("/documentation") ? "#00B0F0" : "black"}
+              />
+            }
+          >
+            <MenuItem> - Финансовые отчеты</MenuItem>
+            <MenuItem> Line charts</MenuItem>
+            <MenuItem> Bar charts</MenuItem>
+          </SubMenu>
         </Menu>
       )}
     </Sidebar>
