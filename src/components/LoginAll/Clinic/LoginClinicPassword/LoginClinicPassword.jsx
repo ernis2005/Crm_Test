@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./page.module.scss";
-const LoginForget = () => {
+import { NavLink } from "react-router-dom";
+const LoginClinicPassword = () => {
   const [formData, setFormData] = useState({
-    laboratory: "",
+    clinic: "",
     email: "",
     phone: "",
     password: "",
@@ -23,7 +24,6 @@ const LoginForget = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
 
@@ -39,26 +39,26 @@ const LoginForget = () => {
       <form onSubmit={handleSubmit} className={styles["form-container"]}>
         <div className={styles["form-group"]}>
           <label className={styles.label}>
-            Моя лаборатория
+            Моя клиника
             <input
               type="text"
               name="laboratory"
-              value={formData.laboratory}
+              value={formData.clinic}
               onChange={handleChange}
-              placeholder="Моя лаборатория"
+              placeholder=" Моя клиника"
               className={styles.input}
             />
           </label>
         </div>
         <div className={styles["form-group"]}>
           <label className={styles.label}>
-            E-mail
+            БИН
             <input
-              type="email"
-              name="email"
+              type="text"
+              name="bin"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Введите электронную почту"
+              placeholder="Введите БИН"
               className={styles.input}
             />
           </label>
@@ -138,4 +138,4 @@ const LoginForget = () => {
   );
 };
 
-export default LoginForget;
+export default LoginClinicPassword;

@@ -133,10 +133,6 @@ const LoginRegistration = () => {
         <button type="submit" className={styles.button}>
           Войти
         </button>
-        <p>
-          У вас уже есть аккаунт? Тогда
-          <a href="/">войдите в аккаунт</a>
-        </p>
       </form>
     </div>
   );

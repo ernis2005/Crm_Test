@@ -48,13 +48,16 @@ function LoginOpen() {
             <label htmlFor="remember-me">Запомни меня</label>
           </div>
           <a href="/" className={s.forgotPassword}>
-            <NavLink to={'/forget'}>Забыли пароль?</NavLink>
+            <NavLink to={"/password"}>Забыли пароль?</NavLink>
           </a>
         </div>
         <button type="submit">Войти</button>
       </form>
       <p className={s.p}>
-        У вас еще нет аккаунта? Тогда <a href="/">зарегистрируйтесь</a>
+        У вас еще нет аккаунта? Тогда{" "}
+        <NavLink to={"/laboratory"}>
+          <a href="#">зарегистрируйтесь</a>
+        </NavLink>
       </p>
     </div>
   );
