@@ -66,8 +66,6 @@
           background-color: #0000;
           outline: none;
         }
-        svg {
-        }
       }
       .UserProfil {
         display: flex;
@@ -83,5 +81,43 @@
         }
       }
     }
+  }
+}
+.backGround {
+  background: #e3f2fd;
+  width: 100%;
+  height: 100vh;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.flexCenter {
+  display: flex;
+  justify-content: space-between;
+}
+.image10All {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: end;
+  img {
+    position: absolute;
+    left: 160vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+}
+.image11 {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50vh;
   }
 }
