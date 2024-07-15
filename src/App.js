@@ -23,7 +23,9 @@ import LoginClinic from "./components/LoginAll/Clinic/LoginClinic/LoginClinic";
 import LoginClinicOpen from "./components/LoginAll/Clinic/LoginClinicOpen/LoginClinicOpen";
 import LoginClinicPassword from "./components/LoginAll/Clinic/LoginClinicPassword/LoginClinicPassword";
 import LoginTechnician from "./components/LoginAll/Technician/LoginTechnician";
-
+import Edit from "./page/Documentation/Edit/Edit";
+import Documentation from "./page/Documentation/Documentation";
+import AddAocuments from "./page/Documentation/AddAocuments/AddAocuments";
 function App() {
   const [isModal, setIsModal] = useState(true);
   const [status, setStatus] = useState(4);
@@ -101,6 +103,12 @@ function App() {
               <Route
                 path="/qutfits/create-an-outfit"
                 element={<CreteAnOutfit />}
+              />
+              <Route path="/documentation" element={<Documentation />} />
+              <Route path="/documentation/:id" element={<Edit />} />
+              <Route
+                path="/documentation/create-a-new-document"
+                element={<AddAocuments />}
               />
             </Routes>
           )}

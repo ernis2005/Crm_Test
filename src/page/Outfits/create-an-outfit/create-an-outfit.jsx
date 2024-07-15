@@ -11,12 +11,15 @@ import {
 } from "date-fns";
 import { ArrowDown, CiDocumentation } from "../../../assets/svg/сreteAnOutfit";
 import PriceList from "../../../components/Outfits/Accordion/PriceList/PriceList";
+import { TeethList16 } from "../../../assets/svg/TeethList";
+import TeethList from "../../../components/Outfits/TeethList/TeethList";
 
 const CreteAnOutfit = () => {
   const [selectedDate, setSelectedDate] = useState(startOfMonth(new Date()));
 
   const [isPriceListAccordion, setIsPriceListAccordion] = useState(false);
   const [priceListValue, setPriceListValue] = useState("Выберите прайс - лист");
+  console.log(priceListValue);
   const filterWeekends = (date) => {
     return !isWeekend(date) && isSameMonth(date, setMonth(new Date(), 9)); // 9 - October
   };
@@ -148,7 +151,13 @@ const CreteAnOutfit = () => {
               className={s.from2Accordion}
               onClick={() => setIsPriceListAccordion(!isPriceListAccordion)}
             >
-              <p>{priceListValue}</p>
+              <p>
+                {priceListValue !== "Выберите прайс - лист"
+                  ? `${priceListValue.name}  ${priceListValue.values.map(
+                      (res) => res.name
+                    )} `
+                  : "Выберите прайс - лист"}
+              </p>
               <ArrowDown />
             </div>
             {isPriceListAccordion && (
@@ -172,6 +181,16 @@ const CreteAnOutfit = () => {
               ))}
             </div>
           </div>
+          <div className={s.from4}>
+            <TeethList priceListValue={priceListValue} />
+          </div>
+          <div className={s.from5}>
+            <h2>Комментарий</h2>
+            <textarea placeholder="Комментарий" />
+          </div>
+        </div>
+        <div className={s.buttonList}>
+          <button>Cоздать наряд</button>
         </div>
       </DivBg>
     </div>
