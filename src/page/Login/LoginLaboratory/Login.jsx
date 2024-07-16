@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [role, setRole] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-  // const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -22,7 +22,10 @@ const Login = () => {
     }
     // }
   };
-
+  const Modal = () => {
+    setShowModal(false);
+    alert("Вы не выбрали роль");
+  };
   // const closeModal = () => {
   //   setShowModal(false);
   //   alert("Вы не выбрали роль");
@@ -60,7 +63,10 @@ const Login = () => {
         </button>
       </form>
       <p className={s.paragraph}>
-        У вас уже есть аккаунт? Тогда <a href="#">войдите в аккаунт</a>
+        У вас уже есть аккаунт? Тогда{" "}
+        <a href="#" onClick={Modal}>
+          войдите в аккаунт
+        </a>
       </p>
     </div>
   );
