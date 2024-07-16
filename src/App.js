@@ -28,7 +28,7 @@ import Documentation from "./page/Documentation/Documentation";
 import AddAocuments from "./page/Documentation/AddAocuments/AddAocuments";
 function App() {
   const [isModal, setIsModal] = useState(true);
-  const [status, setStatus] = useState(4);
+  const [status, setStatus] = useState(55);
   if (status === 4) {
     return (
       <div>
