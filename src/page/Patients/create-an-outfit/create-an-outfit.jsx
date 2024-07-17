@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import s from "./page.module.scss";
 import image2 from "../../../assets/image2.svg";
 import downloa from "../../../assets/downloa.svg";
@@ -11,6 +11,9 @@ import image6 from "../../../assets/image6.svg";
 import image7 from "../../../assets/image7.svg";
 const inputMax = 50;
 const CreateOutfit = () => {
+  const [fileName, setFileName] = useState(null);
+  const fileRef = useRef();
+
   const [inputs, setInputs] = useState({
     fio1: "",
     phone1: "",
@@ -91,7 +94,6 @@ const CreateOutfit = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Отправка данных формы
       console.log("Form submitted:", inputs);
     }
   };
@@ -101,8 +103,10 @@ const CreateOutfit = () => {
   };
 
   const handleBlur = () => {
-    // Задержка для того, чтобы карта не исчезала мгновенно при потере фокуса
     setTimeout(() => setShowMap(false), 200);
+  };
+  const handlerFile = (e) => {
+    setFileName(e.target.files[0].name);
   };
 
   return (
@@ -209,12 +213,13 @@ const CreateOutfit = () => {
             <h4>Файл</h4>
             <div className={s.pataiCenterFlex}>
               {[1, 2, 3].map((_, i) => (
-                <div key={i} className={s.blockItem}>
-                  <p>Название файла</p>
-                  <a href={downloa} download>
-                    <img src={downloa} alt="Download" />
-                  </a>
-                </div>
+                <input
+                  type="file"
+                  placeholder="Название документа"
+                  ref={fileRef}
+                  onChange={(e) => handlerFile(e)}
+                  accept="image/*"
+                />
               ))}
             </div>
           </div>
