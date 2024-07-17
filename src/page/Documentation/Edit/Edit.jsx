@@ -32,7 +32,6 @@ const Edit = () => {
       <DivBg>
         <h2 className={s.Titel}>Добавление документов</h2>
       </DivBg>
-
       <DivBg>
         <div className={s.InputList}>
           <input type="text" placeholder="Название документа" />
@@ -45,7 +44,6 @@ const Edit = () => {
             onChange={(e) => handlerFile(e)}
             accept="image/*"
           />
-
           <div onClick={() => acctiv()}>
             <p>{fileName == null ? `Название документа` : fileName}</p>
             <svg
